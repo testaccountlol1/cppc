@@ -1,7 +1,11 @@
 #pragma once
-#include <string.h>
+#include <stdlib.h>
 typedef struct {
-    char chr;
-    int len;
+    char* data;
+    size_t size;
+    size_t cap;
 } str;
-void
+void initStr(str* s);
+void pushStr(str* s,char* sal);
+char popStr(str* s);
+void delStr(str* s)
