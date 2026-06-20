@@ -17,8 +17,8 @@ int pop(vec* v) {
     return ret;
 }
 void delVec(vec* v) {
-    free(v);
-    vec->data = NULL;
-    vec->size = 0;
-    vec->cap = 0;
+    free(v->data);
+    v->data = NULL;
+    v->size = 0;
+    v->cap = 0;
 }
