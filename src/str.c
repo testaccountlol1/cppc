@@ -24,8 +24,10 @@ char popStr(str* s) {
 }
 
 void delStr(str* s) {
-    if (s->data) free(s->data);
-    s->data = NULL;
+    if (s->data) {
+        free(s->data);
+        s->data = NULL;
+    }
     s->cap = 0;
     s->size = 0;
 }
