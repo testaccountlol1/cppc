@@ -1,4 +1,5 @@
 #include "str.h"
+#include "vec.h"
 #include <stdio.h>
 int main() {
     str s;
@@ -9,5 +10,13 @@ int main() {
         printf("%c\n",c);
     }
     delStr(&s);
+    vec v;
+    init(&v);
+    for (int i = 0;i < 10; ++i) push(&v,i);
+    for (int i = 0;i < 10; ++i) {
+        int d = pop(&v);
+        printf("%d\n",d);
+    }
+    delVec(&v);
     return 0;
 }

@@ -12,7 +12,7 @@ void push(vec* vec,int val) {
     vec->data[vec->size++] = val;
 }
 int pop(vec* v) {
-    int ret = v->data[v->size];
+    int ret = v->data[--v->size];
     v->size--;
     return ret;
 }
