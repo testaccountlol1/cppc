@@ -16,6 +16,5 @@ int main() {
         int d = pop(&v);
         printf("%d\n",d);
     }
-    delVec(&v);
     return 0;
 }
